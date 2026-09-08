@@ -1,4 +1,4 @@
-import { site, whatToExpect, repertoire, schedule } from "@/content/site";
+import { site, schedule } from "@/content/site";
 import BookingForm from "@/components/BookingForm";
 
 function fmtDate(iso: string) {
@@ -13,120 +13,136 @@ export default function Home() {
 
   return (
     <>
-      <header className="header">
-        <div className="wrap">
-          <a className="brand" href="#top">{site.name}</a>
-          <nav className="nav">
-            <a href="#about">About</a>
-            <a href="#repertoire">Repertoire</a>
-            {upcoming.length > 0 && <a href="#schedule">Schedule</a>}
-            <a className="cta" href="#book">Book a night</a>
-          </nav>
-        </div>
-      </header>
+      <main>
+        <header className="topbar">
+          <div className="container">
+            <a className="brand" href="#top">
+              {site.name}
+            </a>
+            <nav className="nav">
+              <a href="#top">Home</a>
+              <a href="#live-shows">Shows</a>
+              <a href={site.links.contact}>Contact</a>
+              <a href="#social">Follow</a>
+            </nav>
+          </div>
+        </header>
 
-      <main id="top">
-        <section className="hero">
-          <div className="wrap">
-            <p className="eyebrow">{site.tagline} · {site.city}</p>
-            <h1>
-              Music that makes <em>the room</em> feel right.
-            </h1>
-            <p className="lede">
-              Soft piano and a warm, unhurried voice for restaurants, hotels and private dinners.
-              Present enough to notice. Never in the way of the conversation.
-            </p>
-            <div className="actions">
-              <a className="btn" href="#book">Book a night</a>
-              <a className="btn ghost" href={site.socials.instagram} target="_blank" rel="noreferrer">
-                Watch on Instagram
+        <section className="panel" id="top">
+          <div className="container">
+            <h1 className="hero-title">{site.name}</h1>
+            <p className="hero-sub">Solo piano, voice, and live atmosphere for intimate Miami venues.</p>
+          </div>
+        </section>
+
+        <section className="panel" id="live-shows">
+          <div className="container">
+            <p className="label">live shows</p>
+            <h2>Upcoming performances</h2>
+            {upcoming.length > 0 ? (
+              <a className="button" href="#schedule">
+                Schedule
+              </a>
+            ) : (
+              <p className="lede">No public dates announced yet — follow on Instagram or TikTok for the next one.</p>
+            )}
+          </div>
+        </section>
+
+        {site.links.music && (
+          <section className="panel">
+            <div className="container">
+              <p className="label">music</p>
+              <h2>Listen to the latest releases</h2>
+              <a className="button" href={site.links.music} target="_blank" rel="noreferrer">
+                Listen
+              </a>
+            </div>
+          </section>
+        )}
+
+        {site.links.patreon && (
+          <section className="panel">
+            <div className="container">
+              <p className="label">patreon</p>
+              <h2>Unreleased originals, early access and more</h2>
+              <a className="button" href={site.links.patreon} target="_blank" rel="noreferrer">
+                Join on Patreon
+              </a>
+            </div>
+          </section>
+        )}
+
+        {site.links.discord && (
+          <section className="panel">
+            <div className="container">
+              <p className="label">discord</p>
+              <h2>Join the community</h2>
+              <a className="button" href={site.links.discord} target="_blank" rel="noreferrer">
+                Discord
+              </a>
+            </div>
+          </section>
+        )}
+
+        {(site.links.venmo || site.links.cashapp) && (
+          <section className="panel" id="shop">
+            <div className="container">
+              <p className="label">tips</p>
+              <h2>Support the music if you enjoy it</h2>
+              <div className="button-group">
+                {site.links.venmo && (
+                  <a className="button ghost" href={site.links.venmo} target="_blank" rel="noreferrer">
+                    Venmo
+                  </a>
+                )}
+                {site.links.cashapp && (
+                  <a className="button ghost" href={site.links.cashapp} target="_blank" rel="noreferrer">
+                    Cash App
+                  </a>
+                )}
+              </div>
+            </div>
+          </section>
+        )}
+
+        <section className="panel" id="social">
+          <div className="container">
+            <p className="label">follow</p>
+            <h2>Live nights and new music, first on social</h2>
+            <div className="button-group">
+              <a className="button ghost" href={site.socials.instagram} target="_blank" rel="noreferrer">
+                Instagram
+              </a>
+              <a className="button ghost" href={site.socials.tiktok} target="_blank" rel="noreferrer">
+                TikTok
               </a>
             </div>
           </div>
         </section>
 
-        <section className="section" id="about">
-          <div className="wrap about">
-            <div className="portrait">
-              {/* Drop a photo at public/marcelo.jpg and swap this block for <img src="/marcelo.jpg" alt="Marcelo Zapata at the piano" /> */}
-              <div className="placeholder">photo coming soon</div>
-            </div>
-            <div className="copy">
-              <p>
-                <strong>I&rsquo;m Marcelo</strong> — a pianist and singer based in Miami. I play the kind of
-                sets you don&rsquo;t have to listen to but end up listening to anyway: standards, boleros,
-                soul, a few things people didn&rsquo;t expect to hear on a piano.
-              </p>
-              <p>
-                Restaurants and hotels book me for weekly residencies. Hosts book me for the dinner
-                where they want the music to be a detail people remember, not the loudest thing in the
-                room.
-              </p>
-              <p>
-                I sing in English and Spanish, take requests, and know how to read a room that is
-                still on its first course.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="section" id="expect">
-          <div className="wrap">
-            <div className="section-head">
-              <span className="kicker">What to expect</span>
-              <h2>Simple for you. Right for the room.</h2>
-            </div>
-            <div className="cards">
-              {whatToExpect.map((c) => (
-                <article className="card" key={c.title}>
-                  <h3>{c.title}</h3>
-                  <p>{c.body}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section" id="repertoire">
-          <div className="wrap">
-            <div className="section-head">
-              <span className="kicker">Repertoire</span>
-              <h2>A few from the book</h2>
-              <p>Tell me the mood of the night and I&rsquo;ll build the set around it.</p>
-            </div>
-            <div className="rep">
-              {repertoire.map((g) => (
-                <div key={g.heading}>
-                  <h3>{g.heading}</h3>
-                  <ul>
-                    {g.songs.map((s) => (
-                      <li key={s}>{s}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-            <p className="rep-note">Have a song that matters to the night? Send it with the booking — I&rsquo;ll learn it.</p>
-          </div>
-        </section>
-
         {upcoming.length > 0 && (
-          <section className="section" id="schedule">
-            <div className="wrap">
-              <div className="section-head">
-                <span className="kicker">Schedule</span>
-                <h2>Where I&rsquo;m playing</h2>
-                <p>Residencies are streamed live on TikTok when the venue allows it. Come by, or watch from wherever you are.</p>
-              </div>
+          <section className="panel" id="schedule">
+            <div className="container">
+              <p className="label">schedule</p>
+              <h2>Upcoming performance dates</h2>
               <div className="schedule">
                 {upcoming.map((s) => (
                   <div className="row" key={s.date + s.venue}>
                     <div className="date">{fmtDate(s.date)}</div>
                     <div>
                       <div className="venue">
-                        {s.url ? <a href={s.url} target="_blank" rel="noreferrer">{s.venue}</a> : s.venue}
+                        {s.url ? (
+                          <a href={s.url} target="_blank" rel="noreferrer">
+                            {s.venue}
+                          </a>
+                        ) : (
+                          s.venue
+                        )}
                       </div>
-                      <div className="meta">{s.area} · {s.time}</div>
+                      <div className="meta">
+                        {s.area} · {s.time}
+                      </div>
                     </div>
                     {s.note && <div className="tag">{s.note}</div>}
                   </div>
@@ -136,37 +152,50 @@ export default function Home() {
           </section>
         )}
 
-        <section className="section book" id="book">
-          <div className="wrap">
-            <div className="section-head">
-              <span className="kicker">Booking</span>
-              <h2>Book a night</h2>
-              <p>Tell me about the room and the date. I reply within a day with availability and a quote.</p>
-            </div>
-            <div className="book-grid">
-              <div className="book-aside">
-                <p>
-                  Residencies, one-off dinners, weddings, corporate evenings. Two-hour minimum. Miami and
-                  surrounding areas; further with travel.
-                </p>
-                <p>
-                  Prefer email? <a href={`mailto:${site.email}`}>{site.email}</a>
-                </p>
+        <section className="panel">
+          <div className="container">
+            <p className="label">stay updated</p>
+            <h2>Sign up for announcements about shows, releases, and events.</h2>
+            <form
+              className="signup"
+              action={`mailto:${site.email}`}
+              method="post"
+              encType="text/plain"
+            >
+              <label htmlFor="subscriber-email">Email</label>
+              <div className="signup-row">
+                <input
+                  id="subscriber-email"
+                  type="email"
+                  name="Email"
+                  placeholder="you@example.com"
+                  required
+                />
+                <button className="button" type="submit">
+                  Sign up
+                </button>
               </div>
-              <BookingForm />
-            </div>
+            </form>
+          </div>
+        </section>
+
+        <section className="panel dark" id="book">
+          <div className="container">
+            <p className="label light">booking</p>
+            <h2>Want a live pianist for your event?</h2>
+            <p className="lede">
+              Residency, private dinner, wedding, or corporate event. Two-hour minimum. I&apos;ll follow up within
+              one business day.
+            </p>
+            <BookingForm />
           </div>
         </section>
       </main>
 
       <footer className="footer">
-        <div className="wrap">
-          <span>&copy; {new Date().getFullYear()} {site.name} · {site.city}</span>
-          <div className="links">
-            <a href={site.socials.instagram} target="_blank" rel="noreferrer">Instagram</a>
-            <a href={site.socials.tiktok} target="_blank" rel="noreferrer">TikTok</a>
-            <a href={`mailto:${site.email}`}>Email</a>
-          </div>
+        <div className="container">
+          <span>{`Copyright © ${new Date().getFullYear()} ${site.name} - All Rights Reserved.`}</span>
+          <span>Miami, FL</span>
         </div>
       </footer>
     </>

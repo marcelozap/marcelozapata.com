@@ -13,6 +13,16 @@ export const site = {
     instagram: "https://instagram.com/marcelozapatamusic",
     tiktok: "https://tiktok.com/@malosound",
   },
+  // Leave any of these empty ("") and its panel is hidden on the homepage.
+  links: {
+    shows: "/#schedule",
+    music: "", // e.g. YouTube / Spotify artist link
+    patreon: "",
+    discord: "",
+    venmo: "",
+    cashapp: "",
+    contact: "/#book",
+  },
 };
 
 export const eventTypes = [
@@ -59,7 +69,7 @@ export const repertoire = [
 ];
 
 // Public schedule. Leave the array empty to hide the section.
-// Sylvia-Ruth model: residencies listed here, streamed live on TikTok.
+// Residencies listed here; add note: "Live on TikTok" for streamed nights.
 export type ScheduleItem = {
   date: string; // ISO date, e.g. "2026-09-19"
   time: string; // "7:00–10:00 PM"
