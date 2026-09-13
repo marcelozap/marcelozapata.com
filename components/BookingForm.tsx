@@ -25,7 +25,7 @@ export default function BookingForm() {
 
       if (res.ok && json.delivered) {
         form.reset();
-        setStatus({ kind: "ok", msg: "Got it. I'll reply within a day." });
+        setStatus({ kind: "ok", msg: "Thanks. Your booking request has been sent." });
         return;
       }
 

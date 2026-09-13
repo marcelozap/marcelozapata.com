@@ -2,11 +2,11 @@
 
 export const site = {
   name: "Marcelo Zapata",
-  tagline: "Solo piano & voice",
+  tagline: "Music & performances",
   city: "Miami, FL",
   url: "https://marcelozapata.com",
   description:
-    "Marcelo Zapata — solo piano and vocals for restaurants, hotels, private dinners and events in Miami. Soft, elegant, unhurried. Book a night.",
+    "My mom calls me Chelo. People call me Marcy. I sing and write songs in English and Spanish, on piano and guitar.",
   // Public-facing email (also used as the mailto fallback before Resend is configured)
   email: "marcelozapata00@gmail.com",
   socials: {
@@ -15,7 +15,7 @@ export const site = {
   },
   // Leave any of these empty ("") and its panel is hidden on the homepage.
   links: {
-    shows: "/#schedule",
+    shows: "/#shows",
     music: "", // e.g. YouTube / Spotify artist link
     patreon: "",
     discord: "",
@@ -24,6 +24,12 @@ export const site = {
     contact: "/#book",
   },
 };
+
+// True once at least one music/support link above is filled in. Used to show/hide
+// the Music section and its nav link together, so they never disagree.
+export const showMusicSection = Boolean(
+  site.links.music || site.links.patreon || site.links.venmo || site.links.cashapp
+);
 
 export const eventTypes = [
   "Restaurant residency",
@@ -80,3 +86,8 @@ export type ScheduleItem = {
 };
 
 export const schedule: ScheduleItem[] = [];
+
+// Full TikTok video URLs to embed on the TikTok section, most recent first.
+// e.g. "https://www.tiktok.com/@malosound/video/1234567890123456789"
+// Leave empty to show just the follow button.
+export const tiktokPosts: string[] = [];

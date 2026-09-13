@@ -10,7 +10,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: `${site.name} — ${site.tagline} · ${site.city}`,
+  title: `${site.name} — ${site.tagline}`,
   description: site.description,
   openGraph: {
     title: `${site.name} — ${site.tagline}`,
@@ -27,11 +27,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "MusicGroup",
+    "@type": "Person",
     name: site.name,
     url: site.url,
     email: site.email,
-    genre: ["Jazz standards", "Boleros", "Soul", "Piano"],
     description: site.description,
     sameAs: [site.socials.instagram, site.socials.tiktok],
     location: { "@type": "Place", name: site.city },

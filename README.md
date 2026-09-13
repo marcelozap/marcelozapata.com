@@ -1,32 +1,20 @@
-# marcelozapata.com
+# Marcelo Zapata
 
-Booking site for Marcelo Zapata — solo piano & voice, Miami. Next.js 15, deployed on Vercel.
+Personal music website for Marcelo Zapata (Chelo / Marcy), built with Next.js and deployed on the existing Vercel project.
 
-## Run locally
+## Local development
 
-```
-npm install
-npm run dev
-```
+Run `npm install`, then `npm run dev`. Use `npm run build` for a production check.
 
-## Edit content
+## Public content
 
-Everything that changes is in `content/site.ts`: email, socials, event types, what-to-expect cards,
-repertoire, and the public schedule. Add rows to `schedule` and the Schedule section appears; past dates hide themselves.
+- `content/home.ts`: introduction, story and the music / MaloSound / XIV connection.
+- `content/site.ts`: email, social links and confirmed public show dates. Empty or past schedules are hidden.
+- Performances stay on Instagram and TikTok; no embedded media is required.
+- A portrait is optional. Only use a confirmed image of Marcelo.
 
-Photo: drop `public/marcelo.jpg` and swap the placeholder block in `app/page.tsx` (comment marks the spot).
+## Bookings
 
-## Booking form
+`/book` redirects to the homepage booking section. The existing `POST /api/booking` endpoint uses Resend when configured, with an email-app fallback. Environment variable names are documented in `.env.example`; credentials do not belong in source control.
 
-`POST /api/booking` sends the request by email through [Resend](https://resend.com).
-
-Until `RESEND_API_KEY` is set, submitting the form opens the visitor's mail app with the request pre-filled
-and addressed to the email in `content/site.ts` — nothing is lost, it just isn't automatic.
-
-To turn on direct delivery, add these in Vercel → Project → Settings → Environment Variables (see `.env.example`):
-
-- `RESEND_API_KEY` — from resend.com (free tier)
-- `BOOKING_TO_EMAIL` — where requests land
-- `BOOKING_FROM_EMAIL` — `onboarding@resend.dev` works immediately; use `bookings@marcelozapata.com` once the domain is verified in Resend
-
-`/book` redirects to the form — use `marcelozapata.com/book` as the link in bios.
+Only the public music site is included here. Local planning tools and communication drafts are not part of the published application.
