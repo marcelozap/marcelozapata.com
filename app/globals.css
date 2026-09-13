@@ -43,7 +43,7 @@ section[id] { scroll-margin-top: 108px; }
 .text-link { display: inline-flex; gap: 1.25rem; align-items: center; min-height: 44px; border-bottom: 1px solid var(--line); font-size: .9375rem; }
 .text-link:hover { border-color: var(--ink); }
 .hero-portrait { margin: 0 0 0 1rem; }
-.hero-portrait img { width: 100%; height: auto; aspect-ratio: 4/5; object-fit: cover; object-position: center; box-shadow: 12px 12px 0 var(--bg-soft); }
+.hero-portrait img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; box-shadow: 12px 12px 0 var(--bg-soft); }
 .hero-portrait figcaption { margin-top: 1.5rem; color: var(--ink-soft); font-size: .875rem; }
 .without-portrait { display: block; }
 .without-portrait .hero-copy { max-width: 850px; }
@@ -130,8 +130,7 @@ section[id] { scroll-margin-top: 108px; }
   .hero-sub { font-size: clamp(1.7rem, 6vw, 2.2rem); margin-top: .75rem; }
   .hero-body { margin-top: 1.15rem; font-size: 1rem; line-height: 1.75; }
   .hero-actions { margin-top: 1.35rem; gap: 1.5rem; }
-  .hero-portrait { margin: 0 .6rem .5rem 0; }
-  .hero-portrait img { max-height: 460px; object-position: center 35%; }
+  .hero-portrait { max-width: 440px; margin: 0 .6rem .5rem 0; }
   .section-grid { grid-template-columns: 1fr; gap: 1.6rem; }
   .label { font-size: .75rem; margin-bottom: .6rem; }
   .panel h2 { font-size: 2.75rem; }

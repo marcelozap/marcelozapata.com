@@ -11,7 +11,8 @@ Run `npm install`, then `npm run dev`. Use `npm run build` for a production chec
 - `content/home.ts`: introduction, story and the music / MaloSound / XIV connection.
 - `content/site.ts`: email, social links and confirmed public show dates. Empty or past schedules are hidden.
 - Performances stay on Instagram and TikTok; no embedded media is required.
-- A portrait is optional. Only use a confirmed image of Marcelo.
+- The supplied portrait lives in `public/images/marcelo-zapata.png`, with its display settings in `content/home.ts`. Next.js serves appropriately sized images.
+- `app/opengraph-image.tsx` creates the social sharing card from the same portrait and site copy.
 
 ## Bookings
 

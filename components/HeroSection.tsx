@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { site } from "@/content/site";
 import { introduction, portrait } from "@/content/home";
 export default function HeroSection() {
@@ -14,7 +15,14 @@ export default function HeroSection() {
           </div>
         </div>
         {portrait && <figure className="hero-portrait">
-          <img src={portrait.src} alt={portrait.alt} width="800" height="1000" fetchPriority="high" />
+          <Image
+            src={portrait.src}
+            alt={portrait.alt}
+            width={1254}
+            height={1254}
+            priority
+            sizes="(max-width: 680px) 90vw, (max-width: 1200px) 40vw, 470px"
+          />
           {portrait.caption && <figcaption>{portrait.caption}</figcaption>}
         </figure>}
       </div>

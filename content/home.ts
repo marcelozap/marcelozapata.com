@@ -13,4 +13,8 @@ export const connections = [
   { name: "MaloSound", role: "The bridge", description: "The bridge between my music and XIV, where I bring sound and creative technology together.", href: "https://malosound.ai/", linkLabel: "Visit MaloSound", current: false },
   { name: "XIV", role: "Trading", description: "My trading work and approach to risk.", href: "https://marcelozapata.dev/", linkLabel: "Visit XIV", current: false },
 ];
-export const portrait: { src: string; alt: string; caption: string } | null = null;
+export const portrait: { src: string; alt: string; caption: string } | null = {
+  src: "/images/marcelo-zapata.png",
+  alt: "Portrait of Marcelo Zapata",
+  caption: "",
+};

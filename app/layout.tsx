@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
   },
-  twitter: { card: "summary_large_image", title: site.name, description: site.description },
+  twitter: {
+    card: "summary_large_image",
+    title: site.name,
+    description: site.description,
+    images: [{ url: "/opengraph-image", alt: "Marcelo Zapata — Music & performances" }],
+  },
   alternates: { canonical: site.url },
 };
 
