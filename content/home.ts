@@ -1,20 +1,11 @@
-// Personal copy confirmed and refined by Marcelo for the music homepage.
+// Draft artist direction based on Marcelo's September 2026 brief.
+// Future-studio imagery is a concept, not a current home or equipment inventory.
 export const introduction = {
   familiarName: "My mom calls me Chelo. People call me Marcy.",
-  body: "I sing and write songs in English and Spanish, on piano and guitar.",
+  body: "I write songs and build the sound around them. Guitar, voice, beats—and the ideas that connect everything I make.",
 };
-export const story = [
-  "I love expressing how I feel through music—putting it into words, getting it out, and letting go.",
-  "In a performance, it’s hard to hide. The truth comes out. I carry that into trading, too.",
-  "Exploring both is an enormous task, but I’m up for it.",
-];
+
 export const connections = [
-  { name: "Marcelo Zapata", role: "Music", description: "My songs and performances. Piano, guitar, and voice.", href: "#music", linkLabel: "You’re here · Listen", current: true },
-  { name: "MaloSound", role: "The bridge", description: "The bridge between my music and XIV, where I bring sound and creative technology together.", href: "https://malosound.ai/", linkLabel: "Visit MaloSound", current: false },
-  { name: "XIV", role: "Trading", description: "My trading work and approach to risk.", href: "https://marcelozapata.dev/", linkLabel: "Visit XIV", current: false },
+  { name: "MaloSound", role: "02 / Music × technology", description: "Exploring the space between music, markets, and creative technology. Price, played back.", href: "https://malosound.ai/", linkLabel: "Visit MaloSound" },
+  { name: "XIV", role: "03 / Trading × software", description: "My work in trading, the tools I build, and how I think about risk.", href: "https://marcelozapata.dev/", linkLabel: "Visit XIV" },
 ];
-export const portrait: { src: string; alt: string; caption: string } | null = {
-  src: "/images/marcelo-zapata.png",
-  alt: "Portrait of Marcelo Zapata",
-  caption: "",
-};

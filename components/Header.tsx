@@ -1,14 +1,8 @@
-import { site } from "@/content/site";
 export default function Header() {
   return (
-    <header className="topbar">
-      <div className="container header-inner">
-        <a className="brand" href="/#top">{site.name}</a>
-        <nav className="nav" aria-label="Main navigation">
-          <a href="/#music">Listen</a><a href="/#about">My story</a><a href="/#elsewhere">Connections</a>
-        </nav>
-        <a className="booking-link" href="/#book">Bookings <span aria-hidden="true">↗</span></a>
-      </div>
-    </header>
+    <header className="topbar"><div className="container header-inner">
+      <a className="brand" href="/#top" aria-label="Marcelo Zapata, home">mz<span>·</span></a>
+      <nav className="nav" aria-label="Main navigation"><a href="/#music">Music</a><a href="/#elsewhere">My world</a><a href="/#book">Get in touch <span aria-hidden="true">↗</span></a></nav>
+    </div></header>
   );
 }

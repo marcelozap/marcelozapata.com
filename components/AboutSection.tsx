@@ -1,11 +1,7 @@
-import { story } from "@/content/home";
+import { introduction } from "@/content/home";
+
 export default function AboutSection() {
-  return (
-    <section className="panel story" id="about" aria-labelledby="story-title">
-      <div className="container section-grid">
-        <div><p className="label">A little about me</p><h2 id="story-title">My story</h2></div>
-        <div className="story-copy">{story.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
-      </div>
-    </section>
-  );
+  return <section className="about" id="about" aria-label="About Marcelo"><div className="container about-inner">
+    <p className="eyebrow">The person behind it</p><div><p className="familiar-name">{introduction.familiarName}</p><p className="about-copy">I love putting what I feel into music. I also trade, write code, and build things. This is where those parts of my life come together.</p></div>
+  </div></section>;
 }

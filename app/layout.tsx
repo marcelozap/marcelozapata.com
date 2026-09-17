@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: site.name,
     description: site.description,
-    images: [{ url: "/opengraph-image", alt: "Marcelo Zapata — Music & performances" }],
+    images: [{ url: "/opengraph-image", alt: "Marcelo Zapata — Music, sound & everything connected" }],
   },
   alternates: { canonical: site.url },
 };

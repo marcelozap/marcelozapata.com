@@ -1,30 +1,26 @@
 import Image from "next/image";
-import { site } from "@/content/site";
-import { introduction, portrait } from "@/content/home";
+import { introduction } from "@/content/home";
+
 export default function HeroSection() {
   return (
-    <section className="panel hero" id="top" aria-labelledby="intro-title">
-      <div className={`container hero-grid${portrait ? "" : " without-portrait"}`}>
-        <div className="hero-copy">
-          <h1 className="hero-title" id="intro-title">{site.name}</h1>
-          <p className="hero-sub">{introduction.familiarName}</p>
-          <p className="hero-body">{introduction.body}</p>
-          <div className="button-group hero-actions">
-            <a className="button" href="#music"><span aria-hidden="true">▷</span> Listen</a>
-            <a className="text-link" href="#about">My story <span aria-hidden="true">↓</span></a>
-          </div>
+    <section className="hero" id="top" aria-labelledby="intro-title">
+      <div className="hero-glow" aria-hidden="true" />
+      <div className="container hero-inner">
+        <div className="hero-topline"><span className="eyebrow">Music is where I begin.</span><span className="hero-language">EN / ES</span></div>
+        <div className="hero-art" aria-hidden="true">
+          <Image src="/images/malosound-orbit.webp" alt="" width={1672} height={941} priority sizes="(max-width: 700px) 110vw, 1000px" />
+          <span className="art-caption">MaloSound / a study in sound & motion</span>
         </div>
-        {portrait && <figure className="hero-portrait">
-          <Image
-            src={portrait.src}
-            alt={portrait.alt}
-            width={1254}
-            height={1254}
-            priority
-            sizes="(max-width: 680px) 90vw, (max-width: 1200px) 40vw, 470px"
-          />
-          {portrait.caption && <figcaption>{portrait.caption}</figcaption>}
-        </figure>}
+        <h1 className="hero-title" id="intro-title" aria-label="Marcelo Zapata"><span>marcelo</span><span>zapata<span className="title-period">.</span></span></h1>
+        <div className="hero-intro">
+          <p>{introduction.body}</p>
+          <div className="hero-actions"><a className="button" href="#music"><span className="play-icon" aria-hidden="true">▶</span> Start with the music</a><a className="quiet-link" href="#elsewhere">The rest of my world <span aria-hidden="true">↘</span></a></div>
+        </div>
+        <div className="world-index" aria-label="Explore my work">
+          <a href="#music"><span className="index-number">01</span><span>Songs & sessions</span><span aria-hidden="true">↓</span></a>
+          <a href="#elsewhere"><span className="index-number">02</span><span>MaloSound</span><span aria-hidden="true">↓</span></a>
+          <a href="#xiv"><span className="index-number">03</span><span>XIV</span><span aria-hidden="true">↓</span></a>
+        </div>
       </div>
     </section>
   );

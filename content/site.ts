@@ -2,11 +2,11 @@
 
 export const site = {
   name: "Marcelo Zapata",
-  tagline: "Music & performances",
+  tagline: "Music, sound & everything connected",
   city: "Miami, FL",
   url: "https://marcelozapata.com",
   description:
-    "My mom calls me Chelo. People call me Marcy. I sing and write songs in English and Spanish, on piano and guitar.",
+    "Songs in English and Spanish. Guitar, voice, and production. Explore Marcelo Zapata’s music and the ideas connecting MaloSound and XIV.",
   // Public-facing email (also used as the mailto fallback before Resend is configured)
   email: "marcelozapata00@gmail.com",
   socials: {
