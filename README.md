@@ -11,7 +11,7 @@ Run `npm ci`, then `npm run dev`. Run `npm run build` for a production check. No
 - `content/home.ts`: introduction and connected MaloSound / XIV project copy.
 - `content/site.ts`: public contact details, confirmed social links, metadata, and show dates. Empty or past schedules stay hidden.
 - `components/SessionPlayer.tsx`: opt-in playback of the supplied acoustic performance. No autoplay or media download before interaction.
-- `public/media/guitar-session.mp4`: web conversion of Marcelo’s supplied September 16 recording, with original audio and frame timing preserved.
+- `public/media/soul-session.mp4`: web conversion of Marcelo’s supplied September 16, 7:49 PM “soul” recording, with original audio and frame timing preserved. This replaces the earlier 57-second performance.
 - `public/images/malosound-orbit.webp`: existing MaloSound brand artwork, converted for the web. Decorative artwork, not live market data.
 - `public/images/future-studio.webp`: the imagined coastal studio concept from the creative direction session. Its visible caption identifies it as a future concept and an AI-generated visual; it does not represent a current residence or owned gear.
 - `app/opengraph-image.tsx`: matching portrait-free social sharing card. Uses the PNG orbit asset for renderer compatibility and local fonts.
