@@ -22,6 +22,15 @@ The earlier portrait asset remains available but is not displayed. The performan
 
 `/book` redirects to the homepage booking section. The existing `POST /api/booking` endpoint uses Resend when configured, with an email-app fallback. Environment variable names are documented in `.env.example`; credentials do not belong in source control.
 
-## Review status
+## Continue editing on another computer
 
-This redesign is prepared in the isolated `codex/artist-world` branch/worktree for visual review. It has not been deployed to the public domain. The original local checkout’s uncommitted files are preserved.
+The shared source is the `main` branch of `marcelozap/marcelozapata.com`. With Node.js and Git installed:
+
+```sh
+git clone https://github.com/marcelozap/marcelozapata.com.git
+cd marcelozapata.com
+npm ci
+npm run dev
+```
+
+If the repository is already cloned, commit or stash any local work first, then switch to `main` and run `git pull --ff-only`. No files from the original Mac workspace are needed; the site assets are included in the repository.
