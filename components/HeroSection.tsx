@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { introduction, listen } from "@/content/home";
 import { site } from "@/content/site";
+import TrackPlayer from "@/components/TrackPlayer";
 
 export default function HeroSection() {
   return (
@@ -18,18 +19,13 @@ export default function HeroSection() {
         </div>
         <div className="listen-row" id="listen">
           <p className="eyebrow">{listen.label}</p>
-          <div className="listen-row-main">
-            <h2>{listen.title}</h2>
-            <audio className="track-player" controls preload="metadata" src={listen.audio}>
-              <a href={listen.audio}>Play Gold in the Dark</a>
-            </audio>
-            <div className="listen-links">
-              <a href={site.socials.spotify} target="_blank" rel="noreferrer">Spotify</a>
-              <span aria-hidden="true">·</span>
-              <a href={site.socials.youtube} target="_blank" rel="noreferrer">YouTube</a>
-              <span aria-hidden="true">·</span>
-              <a href={site.socials.instagram} target="_blank" rel="noreferrer">Instagram</a>
-            </div>
+          <TrackPlayer src={listen.audio} title={listen.title} note={listen.note} />
+          <div className="listen-links">
+            <a href={site.socials.spotify} target="_blank" rel="noreferrer">Spotify</a>
+            <span aria-hidden="true">·</span>
+            <a href={site.socials.youtube} target="_blank" rel="noreferrer">YouTube</a>
+            <span aria-hidden="true">·</span>
+            <a href={site.socials.instagram} target="_blank" rel="noreferrer">Instagram</a>
           </div>
         </div>
       </div>

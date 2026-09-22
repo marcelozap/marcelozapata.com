@@ -3,19 +3,36 @@
   position: relative;
   z-index: 2;
   display: grid;
-  gap: .85rem;
-  max-width: 36rem;
-  margin: 0 0 3.4rem;
-  padding: 1.35rem 0 0;
+  gap: 1rem;
+  max-width: 34rem;
+  margin: 0 0 4.2rem;
+  padding-top: 1.6rem;
   border-top: 1px solid var(--line);
 }
-.listen-row h2 {
-  font-family: var(--serif);
-  font-size: clamp(2rem, 3.4vw, 2.8rem);
-  font-weight: 400;
-  letter-spacing: -.04em;
+.listen-player { display: grid; gap: .85rem; }
+.listen-player-row { display: flex; align-items: center; gap: 1rem; }
+.listen-player h2 {
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  letter-spacing: -.045em;
 }
-.listen-row-main { display: grid; gap: .75rem; }
+.listen-player p { margin-top: .3rem; font-size: .86rem; color: var(--ink-soft); }
+.listen-play {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--bg);
+  font-size: .7rem;
+  cursor: pointer;
+}
+.listen-play:hover { background: var(--accent); border-color: var(--accent); }
+.listen-meter { display: flex; align-items: center; gap: .8rem; }
+.listen-meter input { width: 100%; accent-color: var(--accent); }
+.listen-meter span { flex-shrink: 0; font: .62rem/1 var(--mono); color: var(--ink-soft); letter-spacing: .06em; }
 .listen-links {
   display: flex;
   flex-wrap: wrap;
@@ -26,14 +43,7 @@
 }
 .listen-links a { min-height: 44px; display: inline-flex; align-items: center; }
 .listen-links a:hover { color: var(--accent); }
-.track-player {
-  display: block;
-  width: min(100%, 28rem);
-  height: 40px;
-  margin: .1rem 0 0;
-  accent-color: #c5b5ed;
-}
-.song-listen { margin-top: 1.6rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+.song-listen { display: block; margin-top: 1.6rem; }
 .song-listen h3 { font-size: 1.55rem; letter-spacing: -.04em; }
 .song-listen p { margin-top: .35rem; font-size: .86rem; color: var(--ink-soft); }
 .workbench { max-width: 36rem; }
@@ -45,8 +55,3 @@
   line-height: 1.25;
 }
 .elsewhere { padding-top: 2.5rem; padding-bottom: 2.5rem; }
-.world-index { grid-template-columns: 1fr 1fr; }
-@media (max-width: 700px) {
-  .listen-row { margin-bottom: 2.2rem; }
-  .listen-row h2 { font-size: 1.85rem; }
-}
