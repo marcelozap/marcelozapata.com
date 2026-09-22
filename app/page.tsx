@@ -10,10 +10,10 @@ export const revalidate = 3600;
 export default function Home() {
   return (
     <>
-      <a className="skip-link" href="#top">Skip to content</a>
+      <a className="skip-link" href="#listen">Skip to Gold in the Dark</a>
       <Header />
       <main>
-        <HeroSection /><MusicSection /><ElsewhereSection /><AboutSection /><ShowsSection /><BookingSection />
+        <HeroSection /><MusicSection /><AboutSection /><ElsewhereSection /><ShowsSection /><BookingSection />
       </main>
       <Footer />
     </>

@@ -8,8 +8,9 @@ export const introduction = {
 export const listen = {
   label: "Listen",
   title: "Gold in the Dark",
-  note: "The new track.",
-  audio: "https://github.com/marcelozap/malosound/releases/download/gold-in-the-dark/gold-in-the-dark.mp3",
+  note: "A night. Guitar and piano.",
+  audio:
+    "https://tmpfiles.org/dl/1790050726.d5fd26fee3d4da3b/wnwl8EVlogkT/gold-in-the-dark.mp3",
 };
 
 export const connections = [
