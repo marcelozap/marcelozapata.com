@@ -1,15 +1,23 @@
-// Public music face. Songs first. MaloSound is the workbench, not a second career.
 export const introduction = {
   familiarName: "My mom calls me Chelo. People call me Marcy.",
-  body: "I write songs and build the sound around them. Guitar, voice, everything after.",
+  body: "I write songs and build the sound around them.",
+  after: "Guitar, voice, everything after.",
+  about: "I love putting what I feel into music.",
+};
+
+export const listen = {
+  label: "Listen",
+  title: "Gold in the Dark",
+  note: "The new track.",
+  audio: "https://github.com/marcelozap/malosound/releases/download/gold-in-the-dark/gold-in-the-dark.mp3",
 };
 
 export const connections = [
   {
     name: "MaloSound",
-    role: "02 / Workbench",
-    description: "MaloSound is the workbench — recording, sound, tools. The songs still come first.",
+    role: "Workbench",
+    description: "The workbench. Recording and sound. Songs first.",
     href: "https://malosound.ai/",
-    linkLabel: "Visit MaloSound",
+    linkLabel: "MaloSound",
   },
 ];
