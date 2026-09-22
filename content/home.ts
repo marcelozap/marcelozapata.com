@@ -9,8 +9,7 @@ export const listen = {
   label: "Listen",
   title: "Gold in the Dark",
   note: "A night. Guitar and piano.",
-  audio:
-    "https://tmpfiles.org/dl/1790050726.d5fd26fee3d4da3b/wnwl8EVlogkT/gold-in-the-dark.mp3",
+  audio: "/media/gold-in-the-dark.mp3",
 };
 
 export const connections = [
