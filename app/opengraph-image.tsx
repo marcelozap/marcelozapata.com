@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-export const alt = "Marcelo Zapata — Music, sound & software";
+export const alt = "Marcelo Zapata — Music, sound & everything connected";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const dynamic = "force-static";
@@ -27,7 +27,7 @@ export default async function OpenGraphImage() {
       <div style={{ display: "flex", position: "absolute", left: 0, top: 0, width: "100%", height: "100%", backgroundImage: "linear-gradient(0deg, #101114 0%, rgba(16,17,20,0) 32%, rgba(16,17,20,0) 78%, #101114 100%)" }} />
       <div style={{ display: "flex", position: "relative", flexDirection: "column", width: "100%", padding: "54px 64px 48px" }}>
         <div style={{ display: "flex", alignItems: "center", fontSize: 16, letterSpacing: 4, color: "#c3b5eb" }}>
-          MUSIC / SOUND / SOFTWARE
+          MUSIC / SOUND / MOTION
         </div>
         <div style={{ display: "flex", flexDirection: "column", marginTop: 70 }}>
           <div style={{ fontFamily: "Cormorant", fontStyle: "italic", fontSize: 150, lineHeight: 0.84, letterSpacing: -5 }}>marcelo</div>

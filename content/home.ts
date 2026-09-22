@@ -6,6 +6,5 @@ export const introduction = {
 };
 
 export const connections = [
-  { name: "MaloSound", role: "02 / Music × technology", description: "Exploring the space between music, markets, and creative technology. Price, played back.", href: "https://malosound.ai/", linkLabel: "Visit MaloSound" },
-  { name: "XIV", role: "03 / Trading × software", description: "My work in trading, the tools I build, and how I think about risk.", href: "https://marcelozapata.dev/", linkLabel: "Visit XIV" },
+  { name: "MaloSound", role: "02 / Sound and motion", description: "A study in sound and motion. Beats, takes, the room.", href: "https://malosound.ai/", linkLabel: "Visit MaloSound" },
 ];

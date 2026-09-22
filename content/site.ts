@@ -6,17 +6,15 @@ export const site = {
   city: "Miami, FL",
   url: "https://marcelozapata.com",
   description:
-    "Songs in English and Spanish. Guitar, voice, and production. Explore Marcelo Zapata’s music and the ideas connecting MaloSound and XIV.",
-  // Public-facing email (also used as the mailto fallback before Resend is configured)
+    "Songs in English and Spanish. Guitar, voice, and production. Marcelo Zapata’s music project.",
   email: "marcelozapata00@gmail.com",
   socials: {
     instagram: "https://instagram.com/marcelozapatamusic",
     tiktok: "https://tiktok.com/@malosound",
   },
-  // Leave any of these empty ("") and its panel is hidden on the homepage.
   links: {
     shows: "/#shows",
-    music: "", // e.g. YouTube / Spotify artist link
+    music: "",
     patreon: "",
     discord: "",
     venmo: "",
@@ -34,15 +32,13 @@ export const eventTypes = [
   "Other",
 ];
 
-// Public schedule. Leave the array empty to hide the section.
-// Residencies listed here; add note: "Live on TikTok" for streamed nights.
 export type ScheduleItem = {
-  date: string; // ISO date, e.g. "2026-09-19"
-  time: string; // "7:00–10:00 PM"
+  date: string;
+  time: string;
   venue: string;
-  area: string; // neighborhood / city
-  note?: string; // "Live on TikTok", "Private event", etc.
-  url?: string; // venue link, optional
+  area: string;
+  note?: string;
+  url?: string;
 };
 
 export const schedule: ScheduleItem[] = [];

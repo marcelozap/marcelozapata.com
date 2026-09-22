@@ -14,12 +14,11 @@ export default function HeroSection() {
         <h1 className="hero-title" id="intro-title" aria-label="Marcelo Zapata"><span>marcelo</span><span>zapata<span className="title-period">.</span></span></h1>
         <div className="hero-intro">
           <p>{introduction.body}</p>
-          <div className="hero-actions"><a className="button" href="#music"><span className="play-icon" aria-hidden="true">▶</span> Start with the music</a><a className="quiet-link" href="#elsewhere">The rest of my world <span aria-hidden="true">↘</span></a></div>
+          <div className="hero-actions"><a className="button" href="#music"><span className="play-icon" aria-hidden="true">▶</span> Start with the music</a><a className="quiet-link" href="#malosound">MaloSound <span aria-hidden="true">↘</span></a></div>
         </div>
         <div className="world-index" aria-label="Explore my work">
           <a href="#music"><span className="index-number">01</span><span>Songs & sessions</span><span aria-hidden="true">↓</span></a>
-          <a href="#elsewhere"><span className="index-number">02</span><span>MaloSound</span><span aria-hidden="true">↓</span></a>
-          <a href="#xiv"><span className="index-number">03</span><span>XIV</span><span aria-hidden="true">↓</span></a>
+          <a href="#malosound"><span className="index-number">02</span><span>MaloSound</span><span aria-hidden="true">↓</span></a>
         </div>
       </div>
     </section>
