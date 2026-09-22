@@ -1,4 +1,7 @@
 .hero-intro p + p { margin-top: .55rem; }
+.lang-toggle { display: flex; align-items: center; gap: .35rem; font: .65rem/1.5 var(--mono); letter-spacing: .15em; color: var(--ink-soft); }
+.lang-toggle button { background: none; border: 0; color: inherit; padding: .4rem 0; min-height: 44px; cursor: pointer; }
+.lang-toggle button.is-on { color: var(--ink); }
 .listen-row {
   position: relative;
   z-index: 2;
@@ -30,6 +33,7 @@
   cursor: pointer;
 }
 .listen-play:hover { background: var(--accent); border-color: var(--accent); }
+.listen-play svg { width: 14px; height: 14px; fill: currentColor; }
 .listen-meter { display: flex; align-items: center; gap: .8rem; }
 .listen-meter input { width: 100%; accent-color: var(--accent); }
 .listen-meter span { flex-shrink: 0; font: .62rem/1 var(--mono); color: var(--ink-soft); letter-spacing: .06em; }

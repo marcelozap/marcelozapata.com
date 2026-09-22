@@ -14,8 +14,10 @@ export default function TrackPlayer({ src, title, note }: { src: string; title: 
   const [playing, setPlaying] = useState(false);
   const [current, setCurrent] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const el = audio.current;
     if (!el) return;
     const onTime = () => setCurrent(el.currentTime);
@@ -54,7 +56,11 @@ export default function TrackPlayer({ src, title, note }: { src: string; title: 
       </audio>
       <div className="listen-player-row">
         <button type="button" className="listen-play" onClick={toggle} aria-label={playing ? `Pause ${title}` : `Play ${title}`}>
-          {playing ? "❚❚" : "▶"}
+          {playing ? (
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7V5zm6 0h4v14h-4V5z" /></svg>
+          ) : (
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5L8 5.5z" /></svg>
+          )}
         </button>
         <div>
           <h2>{title}</h2>
@@ -62,13 +68,15 @@ export default function TrackPlayer({ src, title, note }: { src: string; title: 
         </div>
       </div>
       <div className="listen-meter">
-        <input type="range" min={0} max={duration || 1} step={0.1} value={current} aria-label={`${title} playback`} onChange={(event) => {
-          const el = audio.current;
-          if (!el) return;
-          const next = Number(event.target.value);
-          el.currentTime = next;
-          setCurrent(next);
-        }} />
+        {mounted ? (
+          <input type="range" min={0} max={duration || 1} step={0.1} value={current} aria-label={`${title} playback`} onChange={(event) => {
+            const el = audio.current;
+            if (!el) return;
+            const next = Number(event.target.value);
+            el.currentTime = next;
+            setCurrent(next);
+          }} />
+        ) : <div />}
         <span>{fmt(current)} / {fmt(duration)}</span>
       </div>
     </div>
