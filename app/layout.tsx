@@ -7,6 +7,7 @@ import "@fontsource/cormorant-garamond/400-italic.css";
 import "@fontsource/cormorant-garamond/500-italic.css";
 import "@fontsource-variable/inter/wght.css";
 import "./globals.css";
+import "./listen.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
