@@ -8,7 +8,18 @@ export default function MusicSection() {
       <h2 id="music-title">It starts<br />with a feeling.</h2>
       <p>I sing and write in English and Spanish, on guitar and piano. As I build the production, I want to keep what made the first take feel honest.</p>
       <p className="music-note">Guitars up front. Drums underneath.<br />Room for what I need to say.</p>
-      <div className="music-socials"><a className="text-link" href={site.socials.instagram} target="_blank" rel="noreferrer">More on Instagram <span aria-hidden="true">↗</span></a><a className="text-link" href={site.socials.tiktok} target="_blank" rel="noreferrer">TikTok <span aria-hidden="true">↗</span></a>{site.links.music && <a className="text-link" href={site.links.music} target="_blank" rel="noreferrer">More music ↗</a>}</div>
+      <div className="song-listen">
+        <p className="eyebrow">The track</p>
+        <h3>Gold in the Dark</h3>
+        <p>A night. Guitar and piano. The rest only if it stays honest.</p>
+        <audio className="track-player" controls preload="metadata" src="https://github.com/marcelozap/malosound/releases/download/gold-in-the-dark/gold-in-the-dark.mp3">
+          <a href="https://github.com/marcelozap/malosound/releases/download/gold-in-the-dark/gold-in-the-dark.mp3">Gold in the Dark</a>
+        </audio>
+        <div className="music-socials">
+          <a className="text-link" href={site.socials.spotify} target="_blank" rel="noreferrer">Spotify <span aria-hidden="true">↗</span></a>
+          <a className="text-link" href={site.socials.instagram} target="_blank" rel="noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
     </div></div>
   </div></section>;
 }

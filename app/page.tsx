@@ -13,7 +13,7 @@ export default function Home() {
       <a className="skip-link" href="#top">Skip to content</a>
       <Header />
       <main>
-        <HeroSection /><MusicSection /><ElsewhereSection /><AboutSection /><ShowsSection /><BookingSection />
+        <HeroSection /><MusicSection /><AboutSection /><ElsewhereSection /><ShowsSection /><BookingSection />
       </main>
       <Footer />
     </>

@@ -2,19 +2,20 @@
 
 export const site = {
   name: "Marcelo Zapata",
-  tagline: "Music, sound & everything connected",
+  tagline: "Songs in English and Spanish",
   city: "Miami, FL",
   url: "https://marcelozapata.com",
   description:
-    "Songs in English and Spanish. Guitar, voice, and production. Marcelo Zapata’s music project.",
+    "Songs in English and Spanish. Guitar, voice, and production. Marcelo Zapata’s music.",
   email: "marcelozapata00@gmail.com",
   socials: {
     instagram: "https://instagram.com/marcelozapatamusic",
     tiktok: "https://tiktok.com/@malosound",
+    spotify: "https://open.spotify.com/search/Marcelo%20Zapata",
   },
   links: {
     shows: "/#shows",
-    music: "",
+    music: "https://open.spotify.com/search/Marcelo%20Zapata",
     patreon: "",
     discord: "",
     venmo: "",
@@ -24,11 +25,9 @@ export const site = {
 };
 
 export const eventTypes = [
-  "Restaurant residency",
-  "Hotel lobby / lounge",
-  "Private dinner",
-  "Wedding or engagement",
-  "Corporate event",
+  "Collaboration",
+  "Session",
+  "A hello",
   "Other",
 ];
 
