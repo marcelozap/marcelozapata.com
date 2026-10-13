@@ -12,7 +12,7 @@ export const site = {
     instagram: "https://instagram.com/marcelozapatamusic",
     tiktok: "https://tiktok.com/@malosound",
     spotify: "https://open.spotify.com/artist/4hdF3VHgVpZA7wIVDY6DdE",
-    youtube: "https://www.youtube.com/@marcelozapataofficial",
+    youtube: "https://www.youtube.com/shorts/ORnQzXVgnic",
   },
   links: {
     shows: "/#shows",
