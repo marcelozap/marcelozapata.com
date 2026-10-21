@@ -2,11 +2,11 @@
 
 export const site = {
   name: "Marcelo Zapata",
-  tagline: "I write songs and build the sound around them.",
+  tagline: "Software engineer, musician, and builder of useful systems.",
   city: "Miami, FL",
   url: "https://marcelozapata.com",
   description:
-    "I write songs and build the sound around them. Guitar, voice, everything after.",
+    "Marcelo Zapata is a software engineer and musician focused on automation, data workflows, enterprise systems, and songs.",
   email: "marcelozapata00@gmail.com",
   socials: {
     instagram: "https://instagram.com/marcelozapatamusic",

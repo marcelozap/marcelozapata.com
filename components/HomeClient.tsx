@@ -3,6 +3,7 @@ import { useState } from "react";
 import TrackPlayer from "@/components/TrackPlayer";
 import { listen } from "@/content/home";
 import { site } from "@/content/site";
+import { resume } from "@/content/resume";
 import styles from "./MusicHome.module.css";
 
 export default function HomeClient() {
@@ -11,6 +12,7 @@ export default function HomeClient() {
     <a className="skip-link" href="#listen">{lang === 'en' ? 'Skip to music' : 'Ir a la música'}</a>
     <header className={styles.header}>
       <a href="#top">Marcelo Zapata</a>
+      <a className={styles.workLink} href="#work">{lang === 'en' ? 'Work' : 'Trabajo'}</a>
       <div className={styles.language} role="group" aria-label="Language">
         <button aria-pressed={lang==='en'} onClick={()=>setLang('en')}>EN</button>
         <span aria-hidden="true">/</span>
@@ -28,6 +30,15 @@ export default function HomeClient() {
         <a href={site.socials.youtube}>YouTube ↗</a>
         <a href={site.socials.instagram}>Instagram ↗</a>
       </nav>
+      <section id="work" className={styles.work} aria-labelledby="work-title">
+        <p className={styles.workLabel}>{lang === 'en' ? 'Work' : 'Trabajo'}</p>
+        <h2 id="work-title">{lang === 'en' ? 'I build systems that make complex work easier to trust.' : 'Construyo sistemas que hacen más confiable el trabajo complejo.'}</h2>
+        <p>{lang === 'en' ? 'Senior Software Engineer at Publix, working across AI-assisted delivery, quality automation, enterprise APIs, data workflows, and structured reporting.' : 'Senior Software Engineer en Publix, trabajando con entrega asistida por IA, automatización de calidad, APIs empresariales, flujos de datos y reportes estructurados.'}</p>
+        <div className={styles.workMeta}>
+          <span>{resume.skills.slice(0, 6).join(' · ')}</span>
+          <a href="/resume">{lang === 'en' ? 'Read the resume ↗' : 'Ver el resume ↗'}</a>
+        </div>
+      </section>
     </main>
     <footer className={styles.footer} id="hello">
       <a href={`mailto:${site.email}`}>{lang==='en'?'Get in touch':'Contactar'} ↗</a>
