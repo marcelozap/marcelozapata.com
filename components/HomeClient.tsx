@@ -33,7 +33,7 @@ export default function HomeClient() {
       <section id="work" className={styles.work} aria-labelledby="work-title">
         <p className={styles.workLabel}>{lang === 'en' ? 'Work' : 'Trabajo'}</p>
         <h2 id="work-title">{lang === 'en' ? 'I build systems that make complex work easier to trust.' : 'Construyo sistemas que hacen más confiable el trabajo complejo.'}</h2>
-        <p>{lang === 'en' ? 'Senior Software Engineer at Publix, working across AI-assisted delivery, quality automation, enterprise APIs, data workflows, and structured reporting.' : 'Senior Software Engineer en Publix, trabajando con entrega asistida por IA, automatización de calidad, APIs empresariales, flujos de datos y reportes estructurados.'}</p>
+        <p>{lang === 'en' ? "I'm a software engineer and Florida State University graduate with 4+ years working with AI. I build applications, integrations, and automation—from enterprise warehouse systems to Vela Tennis, my upcoming tennis app." : 'Soy ingeniero de software y graduado de Florida State University, con más de 4 años trabajando con IA. Construyo aplicaciones, integraciones y automatización, desde sistemas empresariales de almacén hasta Vela Tennis, mi próxima aplicación de tenis.'}</p>
         <div className={styles.workMeta}>
           <span>{resume.skills.slice(0, 6).join(' · ')}</span>
           <a href="/resume">{lang === 'en' ? 'Read the resume ↗' : 'Ver el resume ↗'}</a>

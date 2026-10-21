@@ -6,7 +6,7 @@ export const site = {
   city: "Miami, FL",
   url: "https://marcelozapata.com",
   description:
-    "Marcelo Zapata is a software engineer and musician focused on automation, data workflows, enterprise systems, and songs.",
+    "Marcelo Zapata is a software engineer and Florida State University graduate with 4+ years working with AI. He builds applications, integrations, and automation, from enterprise warehouse systems to Vela Tennis.",
   email: "marcelozapata00@gmail.com",
   socials: {
     instagram: "https://instagram.com/marcelozapatamusic",
