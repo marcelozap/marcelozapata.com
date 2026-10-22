@@ -2,7 +2,7 @@ export const resume = {
   name: "Marcelo Zapata",
   headline: "Software Engineer | Automation, Data Workflows & Business Intelligence",
   contact: {
-    email: "marcelozapata08@gmail.com",
+    email: "mzapata.music@icloud.com",
     linkedin: "https://www.linkedin.com/in/marcelozap/",
     website: "https://marcelozapata.com",
   },

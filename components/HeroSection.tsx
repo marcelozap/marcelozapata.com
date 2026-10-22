@@ -21,11 +21,11 @@ export default function HeroSection() {
           <p className="eyebrow">{listen.label}</p>
           <TrackPlayer src={listen.audio} title={listen.title} note={listen.note} />
           <div className="listen-links">
-            <a href={site.socials.spotify} target="_blank" rel="noreferrer">Spotify</a>
-            <span aria-hidden="true">·</span>
             <a href={site.socials.youtube} target="_blank" rel="noreferrer">YouTube</a>
             <span aria-hidden="true">·</span>
             <a href={site.socials.instagram} target="_blank" rel="noreferrer">Instagram</a>
+            <span aria-hidden="true">·</span>
+            <a href={site.socials.tiktok} target="_blank" rel="noreferrer">TikTok</a>
           </div>
         </div>
       </div>

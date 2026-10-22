@@ -12,7 +12,11 @@ export default function HomeClient() {
     <a className="skip-link" href="#listen">{lang === 'en' ? 'Skip to music' : 'Ir a la música'}</a>
     <header className={styles.header}>
       <a href="#top">Marcelo Zapata</a>
-      <a className={styles.workLink} href="#work">{lang === 'en' ? 'Work' : 'Trabajo'}</a>
+      <nav className={styles.workLink} aria-label={lang === 'en' ? 'Main navigation' : 'Navegación principal'}>
+        <a href="#listen">{lang === 'en' ? 'Music' : 'Música'}</a>
+        <a href="/resume">Resume</a>
+        <a href="#hello">{lang === 'en' ? 'Contact' : 'Contacto'}</a>
+      </nav>
       <div className={styles.language} role="group" aria-label="Language">
         <button aria-pressed={lang==='en'} onClick={()=>setLang('en')}>EN</button>
         <span aria-hidden="true">/</span>
@@ -26,9 +30,9 @@ export default function HomeClient() {
         <TrackPlayer src={listen.audio} title="Gold in the Dark" />
       </section>
       <nav className={styles.links} aria-label={lang==='en'?'Find my music':'Mi música'}>
-        <a href={site.socials.spotify}>Spotify ↗</a>
         <a href={site.socials.youtube}>YouTube ↗</a>
         <a href={site.socials.instagram}>Instagram ↗</a>
+        <a href={site.socials.tiktok}>TikTok ↗</a>
       </nav>
       <section id="work" className={styles.work} aria-labelledby="work-title">
         <p className={styles.workLabel}>{lang === 'en' ? 'Work' : 'Trabajo'}</p>

@@ -3,7 +3,8 @@
 .header,.main,.footer { width:100%; max-width:820px; margin-inline:auto; }
 .header { display:flex; justify-content:space-between; align-items:center; gap:24px; padding-block:30px; font-size:12px; }
 .header > a:first-child { margin-right:auto; }
-.workLink { color:#938976; text-decoration:none; }
+.workLink { display:flex; gap:18px; color:#938976; text-decoration:none; }
+.workLink a:hover { color:#f2ecdf; }
 .language { display:flex; align-items:center; gap:10px; font-size:11px; color:#716c61; }
 .language button { background:none; border:0; padding:8px 3px; color:#938976; font-size:11px; cursor:pointer; }
 .language button[aria-pressed='true'] { color:#e0c99c; }

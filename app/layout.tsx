@@ -38,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     url: site.url,
     email: site.email,
     description: site.description,
-    sameAs: [site.socials.instagram, site.socials.youtube, site.socials.spotify, site.socials.tiktok],
+    sameAs: [site.socials.instagram, site.socials.youtube, site.socials.tiktok],
     location: { "@type": "Place", name: site.city },
   };
   return (

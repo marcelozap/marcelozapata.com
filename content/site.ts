@@ -7,16 +7,15 @@ export const site = {
   url: "https://marcelozapata.com",
   description:
     "Marcelo Zapata is a software engineer and Florida State University graduate with 4+ years working with AI. He builds applications, integrations, and automation, from enterprise warehouse systems to Vela Tennis.",
-  email: "marcelozapata00@gmail.com",
+  email: "mzapata.music@icloud.com",
   socials: {
     instagram: "https://instagram.com/marcelozapatamusic",
     tiktok: "https://tiktok.com/@malosound",
-    spotify: "https://open.spotify.com/artist/4hdF3VHgVpZA7wIVDY6DdE",
     youtube: "https://www.youtube.com/shorts/ORnQzXVgnic",
   },
   links: {
     shows: "/#shows",
-    music: "https://open.spotify.com/artist/4hdF3VHgVpZA7wIVDY6DdE",
+    music: "#listen",
     patreon: "",
     discord: "",
     venmo: "",
