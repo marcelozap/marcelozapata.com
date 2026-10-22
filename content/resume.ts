@@ -1,13 +1,13 @@
 export const resume = {
   name: "Marcelo Zapata",
-  headline: "Software Engineer | Automation, Data Workflows & Business Intelligence",
+  headline: "Senior Software Engineer | Data Workflows, Automation & Business Intelligence",
   contact: {
     email: "mzapata.music@icloud.com",
     linkedin: "https://www.linkedin.com/in/marcelozap/",
     website: "https://marcelozapata.com",
   },
   summary:
-    "Software engineer with nearly four years of enterprise experience at Publix, progressing from Associate Software Engineer to Senior Software Engineer. Builds and improves quality automation, enterprise APIs, data workflows, AI-assisted delivery systems, and structured reporting across complex technology environments.",
+    "Senior software engineer with nearly four years of progressive enterprise experience at Publix, supporting data workflows, reporting, automation, APIs, and quality delivery across complex technology environments. Combines Python, SQL, Azure data tooling, software testing, and AI-assisted workflow design to improve traceability, operational reliability, and decision support.",
   skills: [
     "Python",
     "SQL",
@@ -16,6 +16,9 @@ export const resume = {
     "REST APIs",
     "Kafka",
     "Azure Databricks",
+    "Power Apps",
+    "Power Automate",
+    "Power BI",
     "Data lake tooling",
     "Playwright",
     "Azure DevOps CI/CD",
@@ -27,7 +30,7 @@ export const resume = {
     {
       company: "Publix Super Markets",
       role: "Senior Software Engineer",
-      dates: "May 2026 – Oct 2026",
+      dates: "May 2025 – Aug 2026",
       bullets: [
         "Led AI-assisted quality and delivery workflows across four development teams inside a Fortune 100 technology organization.",
         "Built validation and automation processes across Playwright, Azure DevOps CI/CD, SQL, REST APIs, Kafka, and structured reporting to improve release confidence, traceability, and cross-team visibility.",
@@ -61,9 +64,9 @@ export const resume = {
   ],
   projects: [
     {
-      name: "XIV$ Financial Research OS",
+      name: "Vela Tennis",
       description:
-        "Built a local-first Python, FastAPI, and React system for financial research, risk review, execution analytics, structured notes, and automated reporting workflows.",
+        "Built a custom iOS tennis application for practice tracking and review; currently under App Store review.",
     },
   ],
   education: "Florida State University — Bachelor of Science in Computer Science & Business, 2019–2022",
