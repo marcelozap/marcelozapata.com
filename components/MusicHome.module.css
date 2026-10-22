@@ -9,9 +9,12 @@
 .language button { background:none; border:0; padding:8px 3px; color:#938976; font-size:11px; cursor:pointer; }
 .language button[aria-pressed='true'] { color:#e0c99c; }
 .main { flex:1; padding-block:76px 88px; }
+.resumeIntro { scroll-margin-top:28px; }
 .label { color:#a89572; font-size:10px; letter-spacing:.16em; margin-bottom:30px; }
 .main h1 { font-family:var(--serif),Georgia,serif; font-size:clamp(70px,10vw,116px); line-height:.95; font-weight:400; letter-spacing:-.04em; color:#d7be8e; margin-bottom:52px; }
 .main h1 em { font-weight:400; }
+.resumeLead { color:#b1a48b; font-size:16px; line-height:1.65; max-width:620px; margin:0 0 24px; }
+.resumeLink { color:#d7be8e; font-size:12px; }
 .player { max-width:460px; scroll-margin-top:32px; }
 .player :global(.listen-player) { padding:0; }
 .player :global(.listen-player h2) { font-family:var(--sans); font-size:13px; letter-spacing:0; font-weight:400; }
@@ -26,6 +29,8 @@
 .workMeta { align-items:baseline; display:flex; flex-wrap:wrap; gap:14px 26px; margin-top:24px; }
 .workMeta span { color:#7f796e; font-size:11px; line-height:1.6; max-width:460px; }
 .workMeta a { color:#d7be8e; font-size:12px; }
+.musicSection { border-top:1px solid #cbb18125; margin-top:100px; padding-top:28px; scroll-margin-top:28px; }
+.musicSection h2 { color:#d7be8e; font-family:var(--serif),Georgia,serif; font-size:clamp(42px,7vw,74px); font-weight:400; line-height:.95; letter-spacing:-.04em; margin:0 0 42px; }
 .footer { border-top:1px solid #cbb18125; display:flex; flex-wrap:wrap; justify-content:space-between; gap:24px; padding-block:24px 32px; font-size:11px; color:#b1a48b; }
 .footer span { color:#7f796e; }
 .page a:hover { color:#f0d9ac; }
